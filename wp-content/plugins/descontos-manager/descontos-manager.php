@@ -18,6 +18,7 @@ Class Descontos_Manager{
 	public function __construct( )
 	{
 		$this->load_modules();
+		add_theme_support( 'post-thumbnails' ); 
 	}
 
 
@@ -26,7 +27,7 @@ Class Descontos_Manager{
 	{
 		require_once( 'model/desconto-manager.model.php' );
 		require_once( 'controller/desconto-manager.controller.php' );
-		//require_once( 'controller/desconto-manager.controller.php' );
+		require_once( 'view/desconto-manager.view.php' );
 
 	}
 

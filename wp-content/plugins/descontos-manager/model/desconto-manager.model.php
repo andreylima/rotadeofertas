@@ -6,6 +6,11 @@ Class Descontos_Manager_Model{
 
 	CONST TAX_POST_TYPE_COMPANIES = 'empresas';
 
+	CONST POST_META_URL_PRODUCT = 'url_product';
+
+	CONST POST_META_URL_PRODUCT_CLICK = 'url_product_click';
+
+
 	
 	public function __construct( $id = null )
 	{
