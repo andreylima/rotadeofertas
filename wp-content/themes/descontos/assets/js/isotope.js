@@ -18,6 +18,6 @@ jQuery(function ($) {
     });
 
 
-// $( "ul" ).has( "li" ).addClass( "full" );
+
 
 });

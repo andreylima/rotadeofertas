@@ -19,6 +19,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 ?>
 </head>
 <body <?php body_class(); ?>>
+	
 	<header>
 		<?php
 		$logo = esc_url( get_stylesheet_directory_uri() . '/assets/img/logo-small.png' );

@@ -16,18 +16,54 @@
 $(".chosen-select").chosen({no_results_text: "Desculpe-nos, mas não temos resultados para essa busca:"}); 
   
 
-$(".chosen-select").chosen().change(function(){ 
 
-var selector = new array();
+$(".chosen-select").chosen().change(function(selectors){ 
 
-$('.search-choice span').each(function(selector){
+
+
+
+
+
+var selectors = new Array();
+
+
+$('.search-choice span').each(function(){
     
-    selector[0] = "teste"
+   
+ selectors.push(".".concat($(this).text()));    
 
 });
 
-alert(selector);
-// $('#container').isotope({ filter: selector });
+
+if (selectors.length == 0)
+{
+
+
+alert("teste");
+$('#container').isotope({ filter: "*" });
+
+exit;
+
+};
+
+
+if (selectors.length > 0 ) {
+
+filters = selectors.join(" ");
+
+$('#container').isotope({ filter: filters });
+
+
+selectors = [];
+
+
+}
+
+
+
+
+
+
 
 
   });
