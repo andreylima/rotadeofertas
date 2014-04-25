@@ -25,12 +25,13 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 		$logo = esc_url( get_stylesheet_directory_uri() . '/assets/img/logo-small.png' );
 		?>
 		<img class ="logo-header" src="<?php echo $logo; ?>">
-		<div class="slogan">
+		<!-- <div class="slogan">
 		Aceita um desconto?	
-		</div>
+		</div> -->
 		<div class="email-field">
-		<div class="label-email">Receba e-mails do RotadeOfertas.com!</div>
-		<input type="text" class="email" placeholder="Seu endereço de e-mail">
-		</div>
+		<div class="label-email">RECEBA NOSSOS E-MAILS</div>
+		<input type="text" class="email" placeholder="SEU ENDEREÇO DE E-MAIL">
 		<input type="submit" value="Go"  class="subscribe-button">
+		</div>
+		
 	</header>

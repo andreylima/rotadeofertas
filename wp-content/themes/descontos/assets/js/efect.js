@@ -13,55 +13,39 @@
     }
   });
 
-$(".chosen-select").chosen({no_results_text: "Desculpe-nos, mas não temos resultados para essa busca:"}); 
+var chosenField = $(".chosen-select");
+
+chosenField.chosen({no_results_text: "Desculpe-nos, mas não temos resultados para essa busca:"}); 
   
 
 
-$(".chosen-select").chosen().change(function(selectors){ 
-
-
-
-
-
+$(".chosen-select").chosen().change(function(){ 
 
 var selectors = new Array();
 
 
-$('.search-choice span').each(function(){
+$('.chosen-select').find('option:selected').each(function(){
     
    
- selectors.push(".".concat($(this).text()));    
+ selectors.push(".".concat($(this).val()));    
 
 });
 
 
-if (selectors.length == 0)
-{
-
-
-alert("teste");
-$('#container').isotope({ filter: "*" });
-
-exit;
-
-};
 
 
 if (selectors.length > 0 ) {
 
-filters = selectors.join(" ");
+filters = selectors.join("");
 
 $('#container').isotope({ filter: filters });
 
 
 selectors = [];
 
-
 }
 
-
-
-
+if ($('.chosen-select').find('option:selected').val() == null) { $('#container').isotope({ filter: "*" }); };
 
 
 

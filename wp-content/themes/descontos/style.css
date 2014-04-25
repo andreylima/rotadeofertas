@@ -17,17 +17,43 @@ Tags: descontos
 @import url('assets/css/chosen.css'); 
 @import url('assets/css/isotope.css'); 
 
-@import url(http://fonts.googleapis.com/css?family=Lato);
-@import url(http://fonts.googleapis.com/css?family=Merriweather);
+@font-face {
+  font-family: 'OpenSans';
+  
+  src: local('Open Sans'), local('OpenSans'), url("//themes.googleusercontent.com/static/fonts/opensans/v6/u-WUoqrET9fUeobQW7jkRT8E0i7KZn-EPnyo3HZu7kw.woff") format('woff');
+}
 
 header {
-	height: 82px;
-	border-bottom: solid 1px #E8E8E8;
+	height: 90px;
 	background-color: white;
+	box-shadow: 1px 0 20px rgba(0,0,0,.15);
 }
 body
 {
-	background: white !important;
+	background-color: rgb(241, 242, 247);
+	margin: 0;
+	font-family: 'OpenSans';
+}
+input
+{
+	font-family: 'OpenSans' !important;
+	
+}
+input[type='text']
+{
+	color: #DD1121 !important;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #DD1121 !important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #DD1121 !important;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #DD1121 !important;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #DD1121 !important;
 }
 .logo-header {
 	height: 78px;
@@ -38,7 +64,6 @@ body
 }
 .conteudo {
 	margin-top: 2px;
-	border-top: solid 1px #E8E8E8;
 	width: 100%;
 }
 .default{
@@ -49,18 +74,30 @@ body
 }
 .align-center
 {
-	width: 600px;
+	width: 800px;
 	margin: auto;
 	margin-top: 50px;
 }
 .chosen-container
 {
 	width: 600px !important;
+	margin: auto;
 	margin-top: 15px;
+	display: block;
+
+}
+.chosen-choices
+{
+	border: 0 !important; 
+	box-shadow: 1px 0 3px rgba(0,0,0,.15);
+}
+.chosen-container-active 
+{
+
 }
 .email
 {
-	margin-left: 300px;
+	
 	margin-top: 5px;
 	background-image: url(assets/img/mail-newsletter.png);
 	background-position: 5px;
@@ -71,10 +108,9 @@ body
 }
 .subscribe-button
 {
-	margin-top: 30px !important;
 	margin-left: 10px !important;
 	display: inline-block;
-	background: #8f7a66;
+	background: #DD1121;
 	border-radius: 3px;
 	padding: 0 20px;
 	text-decoration: none;
@@ -94,13 +130,15 @@ body
 }
 .label-email
 {
-	font-weight: 900;
-	margin-left: 300px;
+	font-weight: 300;
+	
 }
 .email-field
 {
-	float: left;
+	float: right;
 	margin-top: 10px;
+	margin-right: 20px;
+
 }
 .slogan
 {
@@ -111,18 +149,126 @@ body
 .label-search
 {
 	text-align: center;
+	text-shadow: 0px 1px 1px #FF0000;
 }
 .item
 {
-	height: 200px;
-	width: 200px;
+	height: 300px;
+	width: 220px;
 	text-align: center;
-	background-color: gray;
-	border : solid;
+	background-color: white;
+	box-shadow: 5px 0 10px rgba(0,0,0,.15);
+	margin-left: 23px;
+	margin-bottom: 10px;
+	font-weight: 900;
+	font-size: 20px;
+	
+}
+.item:hover
+{
+	text-align: center;
+	background-color: white;
+	box-shadow: 5px 0 10px rgba(0,0,0,.15);
+	margin-left: 23px;
+	margin-bottom: 10px;
+	font-weight: 900;
+	font-size: 20px;
+	-webkit-transform:scale(1.1); /* prefixo para browsers webkit */
+	-moz-transform:scale(1.1); /* prefixo para browsers gecko */
+	-o-transform:scale(1.1); /* prefixo para opera */
+	transform:scale(1.1);
 }
 #container
 {
-	width: 90%;
+	width: 1200px;
 	margin: auto;
+	margin-top: 40px;
+	min-height: 360px;
+
+}
+.frase1
+{
+	font-size: 3em;
+	font-weight: 300;	
+}
+.frase2
+{
+	font-size: 1.5em;
+	font-weight: 300;	
+	margin-top: 30px;
+}
+.pic
+{
+	width: 170px;
+}
+.marca-item
+{
+	display: block;
+	color: white;
+	background-color: #2ba6cb;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.desc-produto
+{
+	display: block;
+	width: 215px;
+	font-size: 14px;
+	color: black;
+}
+.preco-atual
+{
+	height: 111px;
+	width: 111px;
+	background-image: url(assets/img/balao.png);
+	background-repeat: no-repeat;
+	display: block;
+	position: relative;
+	bottom: 40px;
+	right: -22px;
+	float: right;
+	border-radius: 50%;
+	box-shadow: 4px 0 11px rgba(0,0,0,.15);
+	color: yellow;
+	line-height: 111px;
+	font-weight: bolder;
+	font-size: 18px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+.preco-atual:hover
+{
+	background-image: url(assets/img/balao.png);
+	background-repeat: no-repeat;
+	display: block;
+	position: relative;
+	bottom: 40px;
+	right: -22px;
+	float: right;
+	border-radius: 50%;
+	box-shadow: 4px 0 11px rgba(0,0,0,.15);
+	color: yellow;
+	line-height: 111px;
+	font-weight: bolder;
+	font-size: 18px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+	-webkit-transform:scale(1.1); /* prefixo para browsers webkit */
+	-moz-transform:scale(1.1); /* prefixo para browsers gecko */
+	-o-transform:scale(1.1); /* prefixo para opera */
+	transform:scale(1.1);
+}
+.preco_antigo
+{
+	float: left;
+	font-size: 15px;
+	text-decoration: line-through;
+	display: block;
+	margin-left: 30px;
 	margin-top: 20px;
+	color: gray;
 }
